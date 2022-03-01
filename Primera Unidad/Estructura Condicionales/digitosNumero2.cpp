@@ -31,10 +31,6 @@ int main(){
 			cout<<" El numero esta compuesto por MAS DE >5 digito";
 	}
 	
-	
-	
-
-	
 	getch();	
 	
 }
