@@ -8,6 +8,7 @@ int main(){
 	
 	  int numero,ud,centenas,decenas,unidades,numeroOriginal;
 
+
 	cout<<"Ingrese un numero entero de cuatro cifras: ";
 	cin>>numero; //1985                         // EL MAXIMO: 3999 
 
