@@ -16,7 +16,7 @@ int main(){
 	
 	int notas[]={80,90,75,50,100};
 	
-	for(int i=0;i<5;i++){
+	for(int i=0;i<5;i++){//ciclo for para mostrar los datos
 		cout<<notas[i]<<endl;
 	}
 	
