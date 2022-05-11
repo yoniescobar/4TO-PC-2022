@@ -42,10 +42,17 @@ int main(){
 		   sumCol[i]=setCol;
 	     }
 	     
+	     int sumarD1 =0,sumarD2=0;
 	     
 	      for(int i=0;i<col;i++){//sumar diagonales D1 y D2
 			for(int j=0;j<fila;j++){ 
-			  setCol= setCol + matrizA[j][i];
+			  
+			    if(i==j){  //posicion de fila  i == j col //suma la primera diagonal
+				  sumarD1 = sumarD1 + matrizA[i][j];
+				}
+				if(i+j==fila-1){
+					sumarD2 = sumarD2 + matrizA[i][j];
+				}
 			}
 	     }
 	     
@@ -73,5 +80,9 @@ int main(){
       cout<<"Fila ["<<i<<"]: "<<sumCol[i]<<endl;
    
    }
+   
+   cout<<"\n Suma de la Diagonal 1: "<<sumarD1;
+    cout<<"\n Suma de la Diagonal 2: "<<sumarD2;
+   
 	getch();
 }
