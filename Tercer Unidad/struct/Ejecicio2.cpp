@@ -5,7 +5,7 @@
 
 using namespace std; //2. Using namespace std;
 
-#define cantidad 2   //3. constantes
+#define limite 100   //3. constantes
 
 struct Auto{         //4. declar estructuras
 	char placa[10];
@@ -14,24 +14,46 @@ struct Auto{         //4. declar estructuras
 	float precio;
 };
 	                 //5. funciones
-void mostrarEstructa(){
-     Auto ve[cantidad];	//declaro un vector de Auto para 5 elementos
+
+
+void llenarStructura();
+void mostrarEstructa(Auto ve[]);
+int cant=1000;
+Auto ve[limite];	//declaro un vector de Auto para 5 elementos
+int main(){           //6. funcion main
+	
+	llenarStructura();
+    mostrarEstructa(ve);
+	
+	getch();
+	return 0;
+}
+
+void llenarStructura(){
      
-     for(int i=0;i<cantidad;i++){  //llenando de autos el vector
-     	cout<<"\n ----------------Datos del Auto "<<(i+1)<<"------------------";
+     cout<<"\n Cuantos Autos desea Ingresar: ";
+     cin>>cant;
+     
+     for(int i=0;i<cant;i++){  //llenando de autos el vector
+     	cin.ignore();
+		 cout<<"\n ----------------Datos del Auto "<<(i+1)<<"------------------";
      	cout<<"\nPlaca: ";   gets(ve[i].placa);  
 	    cout<<"Color: ";     gets(ve[i].color);
 		cout<<"Marca: ";     gets(ve[i].marca);
 		cout<<"Precio: ";    cin>>ve[i].precio;
-		cin.ignore();
+	
 	 }
-     
+	
 }
-
-int main(){           //6. funcion main
+void mostrarEstructa(Auto ve[]){
+	cout<<endl;
+	cout<<"                   Mostrando Datos del Auto                    "<<endl;
+	cout<<"==============================================================="<<endl;
+	cout<<"\nNo.\tPlaca\t\tColor\tMarca\tPrecio"<<endl;
+	cout<<"--------------------------------------------------------------"<<endl;
 	
-	mostrarEstructa();
-	
-	getch();
-	return 0;
+	 for(int i=0;i<cant;i++){  
+     cout<<(i+1)<<": "<<"\t"<<ve[i].placa<<"\t\t"<<ve[i].color<<"\t"<<ve[i].marca<<"\t"<<ve[i].precio<<endl;    
+	 cout<<"--------------------------------------------------------------"<<endl;	
+	 }
 }
