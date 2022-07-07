@@ -18,12 +18,13 @@ struct Auto{         //4. declar estructuras
 
 void llenarStructura();
 void mostrarEstructa(Auto ve[]);
-int cant=1000;
+int cant;
 Auto ve[limite];	//declaro un vector de Auto para 5 elementos
+
 int main(){           //6. funcion main
 	
 	llenarStructura();
-    mostrarEstructa(ve);
+    mostrarEstructa(ve);//enviando la estructura de arreglo de datos
 	
 	getch();
 	return 0;
@@ -36,7 +37,7 @@ void llenarStructura(){
      
      for(int i=0;i<cant;i++){  //llenando de autos el vector
      	cin.ignore();
-		 cout<<"\n ----------------Datos del Auto "<<(i+1)<<"------------------";
+		cout<<"\n ----------------Datos del Auto "<<(i+1)<<"------------------";
      	cout<<"\nPlaca: ";   gets(ve[i].placa);  
 	    cout<<"Color: ";     gets(ve[i].color);
 		cout<<"Marca: ";     gets(ve[i].marca);

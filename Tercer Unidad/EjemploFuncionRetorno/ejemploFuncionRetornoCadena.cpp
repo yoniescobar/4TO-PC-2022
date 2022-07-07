@@ -20,7 +20,12 @@ string convertirRomano(int n) //8 = VIII
 {
 	//aqui se hacen todos los calculos..... 
 	
-	    string resp = "El cubo del numero es: VIII";
+		string n1 = "I";
+		string n2 = "V";
+		string n3 = "X";
+		string res;
 		
-		return resp;
+		res = n1+n2+n3;
+		
+		return res;
 }
