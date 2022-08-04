@@ -1,0 +1,18 @@
+	 Productos Electronicos
+
+Nombre: Tv
+Cantidad: 5
+Telefono: 1800
+
+Nombre: Celular
+Cantidad: 8
+Telefono: 9000
+
+Nombre: Mesa
+Cantidad: 5
+Telefono: 1500
+
+Nombre: Impresora
+Cantidad: 4
+Telefono: 1800
+
